@@ -6,6 +6,11 @@ function comprar(){
     let tipoIngresso = document.getElementById('tipo-ingresso').value;
     let quantidadeCompra = document.getElementById('qtd').value;
     
+    if (quantidadeCompra <= 0 || isNaN (quantidadeCompra)){
+        alert('Favor digitar um número válido');
+        document.getElementById('qtd').focus();
+        return;
+    }
  switch (tipoIngresso){
     
     case "pista":
